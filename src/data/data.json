@@ -1,14 +1,58 @@
 {
-    "persoon1": {
-      "naam": "Jan Jansen",
-      "leeftijd": 30,
-      "beroep": "Software Engineer",
-      "woonplaats": "Amsterdam"
+    "WeeklyNerd1": {
+      "titel": "Weekly Nerd 1",
+      "naam_spreker": "Jan Jansen",
+      "datum": 30,
+      "verslag": "Software Engineer",
+      "reflectie": ""
     },
-    "persoon2": {
-      "naam": "Lisa de Vries",
-      "leeftijd": 28,
-      "beroep": "Data Analist",
-      "woonplaats": "Utrecht"
+    "WeeklyNerd2": {
+      "titel": "Weekly Nerd 2",
+      "naam_spreker": "Jan Jansen",
+      "datum": 30,
+      "verslag": "Software Engineer",
+      "reflectie": ""
+    },
+    "WeeklyNerd3": {
+      "titel": "Weekly Nerd 3",
+      "naam_spreker": "Jan Jansen",
+      "datum": 30,
+      "verslag": "Software Engineer",
+      "reflectie": ""
+    },
+    "WeeklyNerd4": {
+      "titel": "Weekly Nerd 4",
+      "naam_spreker": "Jan Jansen",
+      "datum": 30,
+      "verslag": "Software Engineer",
+      "reflectie": ""
+    },
+    "WeeklyNerd5": {
+      "titel": "Weekly Nerd 5",
+      "naam_spreker": "Jan Jansen",
+      "datum": 30,
+      "verslag": "Software Engineer",
+      "reflectie": ""
+    },
+    "WeeklyNerd6": {
+      "titel": "Weekly Nerd 6",
+      "naam_spreker": "Jan Jansen",
+      "datum": 30,
+      "verslag": "Software Engineer",
+      "reflectie": ""
+    },
+    "WeeklyNerd7": {
+      "titel": "Weekly Nerd 7",
+      "naam_spreker": "Jan Jansen",
+      "datum": 30,
+      "verslag": "Software Engineer",
+      "reflectie": ""
+    },
+    "WeeklyNerd8": {
+      "titel": "Weekly Nerd 8",
+      "naam_spreker": "Jan Jansen",
+      "datum": 30,
+      "verslag": "Software Engineer",
+      "reflectie": ""
     }
   }

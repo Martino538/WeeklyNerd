@@ -11,33 +11,27 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('dist/assets')); // Serve static files from the 'public' directory
 app.set('view engine', 'ejs');
 
-// async function fetchMultipleUrls() {
-//   const url1 = ``;
+async function fetchMultipleUrls() {
+  const url1 = `https://raw.githubusercontent.com/Martino538/WeeklyNerd/main/src/data/data.json`;
 
-//   // Fetch data from both URLs concurrently
-//   const [data1] = await Promise.all([
-//     fetch(url1).then(response => response.json())
-//   ]);
+  // Fetch data from both URLs concurrently
+  const [data] = await Promise.all([
+    fetch(url1).then(response => response.json())
+  ]);
 
-//   return { discoverMovies: data1.results};
-// }
+  console.log(data);
 
-// async function fetchMovieDetails(movieId) {
-//   const url = `https://api.themoviedb.org/3/movie/${movieId}&language=nl-NL?api_key=${apiKey}`;
-//   const response = await fetch(url);
-//   const data = await response.json();
-//   return data;
-// }
+  return { dataResults: data};
+}
 
 // Routes
 app.get("/", async (req, res) => {
   try {
-    const fetchedData = '';
-    let title = "test";
-    res.render('pages/index', {title});
+    const { dataResults} = await fetchMultipleUrls();
+    res.render('pages/index', {dataResults});
   } catch (error) {
-    console.error('No data to be seen:', error);
-    res.status(500).send('No data');
+    console.error('Fetching movies failed:', error);
+    res.status(500).send('Failed to fetch movies');
   }
 });
 
