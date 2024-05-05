@@ -1,0 +1,14 @@
+{
+    "persoon1": {
+      "naam": "Jan Jansen",
+      "leeftijd": 30,
+      "beroep": "Software Engineer",
+      "woonplaats": "Amsterdam"
+    },
+    "persoon2": {
+      "naam": "Lisa de Vries",
+      "leeftijd": 28,
+      "beroep": "Data Analist",
+      "woonplaats": "Utrecht"
+    }
+  }
