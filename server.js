@@ -18,8 +18,6 @@ async function fetchDataset() {
   const response = await fetch(url1);
   const data = await response.json();
   
-  console.log(data.results); // Controleer de structuur van de ontvangen gegevens
-
   return { dataResults: data.results };
 }
 
@@ -27,7 +25,6 @@ async function fetchDataset() {
 app.get("/", async (req, res) => {
   try {
     const { dataResults } = await fetchDataset();
-    console.log(dataResults);
     res.render('pages/index', {dataResults});
   } catch (error) {
     console.error('Fetching movies failed:', error);
