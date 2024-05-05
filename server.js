@@ -14,20 +14,20 @@ app.set('view engine', 'ejs');
 async function fetchDataset() {
   const url1 = `https://raw.githubusercontent.com/Martino538/WeeklyNerd/main/src/data/data.json`;
 
-  // Fetch data from both URLs concurrently
-  const [data] = await Promise.all([
-    fetch(url1).then(response => response.json())
-  ]);
+  // Fetch data from the URL
+  const response = await fetch(url1);
+  const data = await response.json();
+  
+  console.log(data.results); // Controleer de structuur van de ontvangen gegevens
 
-  console.log(data);
-
-  return { dataResults: data.results};
+  return { dataResults: data.results };
 }
 
 // Routes
 app.get("/", async (req, res) => {
   try {
-    const {dataResults} = await fetchDataset();
+    const { dataResults } = await fetchDataset();
+    console.log(dataResults);
     res.render('pages/index', {dataResults});
   } catch (error) {
     console.error('Fetching movies failed:', error);
