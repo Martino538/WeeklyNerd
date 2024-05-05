@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('dist/assets')); // Serve static files from the 'public' directory
 app.set('view engine', 'ejs');
 
-async function fetchMultipleUrls() {
+async function fetchDataset() {
   const url1 = `https://raw.githubusercontent.com/Martino538/WeeklyNerd/main/src/data/data.json`;
 
   // Fetch data from both URLs concurrently
@@ -21,13 +21,13 @@ async function fetchMultipleUrls() {
 
   console.log(data);
 
-  return { dataResults: data};
+  return { dataResults: data.results};
 }
 
 // Routes
 app.get("/", async (req, res) => {
   try {
-    const { dataResults} = await fetchMultipleUrls();
+    const {dataResults} = await fetchDataset();
     res.render('pages/index', {dataResults});
   } catch (error) {
     console.error('Fetching movies failed:', error);
