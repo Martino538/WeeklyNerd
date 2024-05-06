@@ -88,6 +88,14 @@ h4 {
     background: linear-gradient(180deg, rgba(255,230,0,1) 0%, rgba(255,245,152,1) 100%);
     position: relative;
 
+    > img {
+        width: 140px;
+        left: 130px;
+        bottom: 300px;
+        position: absolute;
+        transform: rotate(-15deg);
+    }
+
     &:before, &:after{
         position: absolute;
         width: 0px;
