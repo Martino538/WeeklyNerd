@@ -1,5 +1,6 @@
 import '../css/index.css';
 import '../img/logo.png';
+import '../img/coding.svg';
 
 const cards = document.querySelectorAll('.div');
 cards.forEach((card) => {
