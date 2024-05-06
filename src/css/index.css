@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
+    --yellow: #ffe698;
     --white: #ffffff;
     --black: #000000;
     --grey: #e7e7e7;
@@ -148,29 +149,42 @@ h4 {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: calc(33.33% - 60px);
     flex: 1 0 calc(33.33% - 60px);
     max-width: calc(33.33% - 60px);
     background-color: var(--white);
     padding: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: .2s;
 
-    .card-header {
-
+    &:hover {
+        transform: scale(1.05);
     }
 
-    .card-body {
+    .card-header {
+        position: relative;
+    
+        small {
+            position: absolute;
+            top: 5px;
+            right: 0;
+        }
+    }
+
+    .card-footer {
         button {
             background: transparent;
             border: none;
             font-weight: bold;
             padding: 0;
+            transition: .2s;
 
-            &:after {
-                content: '\f101';
-                font-family: var(--font-fontAwesome);
-                font-size: 16px;
-                color: var(--black);
+            &:hover {
+                cursor: pointer;
+                color: var(--yellow);
             }
         }
     }
