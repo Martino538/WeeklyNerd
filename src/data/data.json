@@ -2,57 +2,57 @@
   "results": [
     {
       "titel": "Weekly Nerd 1",
-      "naam_spreker": "Jan Jansen",
-      "datum": 30,
+      "naam_spreker": "Kilian Valkhof",
+      "datum": "07-02-2024",
+      "onderwerp": "Nieuwe CSS & Browser Polypane",
       "verslag": "Software Engineer",
       "reflectie": ""
     },
     {
       "titel": "Weekly Nerd 2",
-      "naam_spreker": "Jan Jansen",
-      "datum": 30,
+      "naam_spreker": "Fenna de Wilde",
+      "datum": "14-02-2024",
+      "onderwerp": "",
       "verslag": "Software Engineer",
       "reflectie": ""
     },
     {
       "titel": "Weekly Nerd 3",
-      "naam_spreker": "Jan Jansen",
-      "datum": 30,
+      "naam_spreker": "Jeffrey Arts",
+      "datum": "28-02-2024",
+      "onderwerp": "Creative Developer & Toolbox",
       "verslag": "Software Engineer",
       "reflectie": ""
     },
     {
       "titel": "Weekly Nerd 4",
-      "naam_spreker": "Jan Jansen",
-      "datum": 30,
+      "naam_spreker": "Nils Binder",
+      "datum": "06-03-2024",
+      "onderwerp": "Hoofd Webdevelopment 9Elements",
       "verslag": "Software Engineer",
       "reflectie": ""
     },
     {
       "titel": "Weekly Nerd 5",
-      "naam_spreker": "Jan Jansen",
-      "datum": 30,
+      "naam_spreker": "Jeremy Keith",
+      "datum": "14-03-2024",
+      "onderwerp": "Vertegenwoordiger Clearleft",
       "verslag": "Software Engineer",
       "reflectie": ""
     },
     {
       "titel": "Weekly Nerd 6",
-      "naam_spreker": "Jan Jansen",
-      "datum": 30,
+      "naam_spreker": "Marieke & Pim",
+      "datum": "03-04-2024",
+      "onderwerp": "Heb web toegankelijker maken voor iedereen!",
       "verslag": "Software Engineer",
       "reflectie": ""
     },
     {
       "titel": "Weekly Nerd 7",
-      "naam_spreker": "Jan Jansen",
-      "datum": 30,
-      "verslag": "Software Engineer",
-      "reflectie": ""
-    },
-    {
-      "titel": "Weekly Nerd 8",
-      "naam_spreker": "Jan Jansen",
-      "datum": 30,
+      "naam_spreker": "Rosa",
+      "datum": "10-04-2024",
+      "onderwerp": "Creative Coder bij Wetteloos",
       "verslag": "Software Engineer",
       "reflectie": ""
     }
