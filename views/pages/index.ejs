@@ -5,20 +5,41 @@
         <title>Martijn's API site</title>
     </head>
     <body>
-        <%- include('../components/nav.ejs'); %>
-        <div class="content-wrapper">
+        <section class="pageheader">
+            <div class="content">
+                <h1>Weekly Nerds 2024</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Minus, cum corrupti ipsa voluptas suscipit similique aperiam repellat blanditiis, 
+                    animi, nobis ipsum. Obcaecati non velit culpa veritatis quas deleniti totam nisi!</p>
+                <div class="nav-search">
+                    <form action="/search">
+                        <div class="input-wrapper">
+                            <i class="fas fa-search input-icon"></i>
+                            <label for="search-movie"></label>
+                            <input type="search" placeholder="Zoek een weekly nerd..." name="term" id="search-movie">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="cards-section">
             <div class="container">
-                <h1>Test</h1>
-                <% dataResults.forEach(element => { %>
-                    <div class="card">
-                        <div class="card-header">
-                            <h3><%= element.titel %></h3>
-                        </div>
-                        <div class="card-body">
-                            <p><%= element.verslag %></p>
-                        </div>
+                <div class="nerd-cards">
+                    <div class="card-container">
+                        <% dataResults.forEach(element => { %>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3><%= element.titel %></h3>
+                                    <h4><%= element.naam_spreker %></h4>
+                                </div>
+                                <div class="card-body">
+                                    <p><%= element.verslag %></p>
+                                    <button type="button">Lees meer</button>
+                                </div>
+                            </div>
+                        <% }); %>
                     </div>
-                <% }); %>
+                </div>
             </div>
         </div>
     </body>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
     --white: #ffffff;
@@ -6,53 +7,30 @@
     --grey: #e7e7e7;
     --font-Roboto: "Roboto", sans-serif;
     --font-fontAwesome: "Font Awesome 6", sans-serif;
+    --font-openSans: "Open Sans", sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: var(--font-Roboto);
-    background-color: var(--grey);
-}
-
-header {
-    height: 10vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-
-    
-    nav {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        background-color: var(--white);
-    }
+    font-family: var(--font-openSans);
 }
 
 .nav-search {
-    height: 100%;
-    flex: 1 0 300px;
-    max-width: 300px;
     width: 300px;
-    display: flex;
-    align-items: center;
 
     form {
-        width: 100%;
-        position: relative;
-
         .input-wrapper {
             position: relative;
 
             .input-icon {
                 position: absolute;
-                left: 5px;
+                left: 40px;
                 top: 50%;
                 transform: translateY(-50%);
                 color: var(--black);
                 padding-left: 5px;
+                z-index: 1;
             }
         }
     }
@@ -60,14 +38,18 @@ header {
 
 input {
     width: 80%;
-    background-color: transparent;
+    background-color: var(--white);
     border: 2px solid var(--black);
-    padding: 12px 10px 10px 30px;
+    padding: 10px 10px 10px 40px;
     position: relative;
     color: var(--black);
     font-family: var(--font-Bebas);
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 16px;
+
+    i {
+        color: var(--black);
+    }
 
     &::placeholder {
         color: var(--black);
@@ -80,212 +62,119 @@ input {
     }
 }
 
-.nav-logo {
-    height: 100%;
-    flex: 1 0 200px;
-    width: 200px;
-    max-width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        width: 50px;
-        transform-origin: center center;
-
-        &:hover {
-            animation: rotate 3s ease-in-out infinite;
-            cursor: pointer;
-        }
-    }
-}
-
-.nav-content {
-    height: 100%;
-    flex: 1 0 calc(100% - 500px);
-    width: calc(100% - 500px);
-    max-width: calc(100% - 500px);
-
-    ul {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        margin: 0;
-        padding: 0;
-
-        li {
-            list-style-type: none;
-
-            a {
-                font-size: 20px;
-                color: var(--black);
-                text-decoration: none;
-                transition: all .2s ease-in-out;
-
-                &:hover {
-                    cursor: pointer;
-                    color: red;
-                }
-            }
-        }
-    }
-}
-
-.hamburger-menu {
-    display: none;
-    flex: 1 0 75px;
-    max-width: 75px;
-    width: 75px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.hamburger-menu span {
-    display: block;
-    width: 45%;
-    height: 3px;
-    background-color: var(--black);
-    border-radius: 10px;
-}
-
-.menu-open {
-    background-color: #0E1122;
-}
-
-.menu-open .nav-content {
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.menu-open .nav-content {
-    display: flex;
-    max-width: none;
-    flex: unset;
-}
-
-.menu-open ul {
-    justify-content: center;
-    flex-direction: column;
-}
-.menu-open ul li a {
-    font-size: 30px;
-}
-
-.menu-open span:first-of-type {
-    transform: translateY(3px) rotate(45deg);
-}
-.menu-open span:nth-of-type(2) {
-    display: none;
-}
-.menu-open span:last-of-type{
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-@media screen and (max-width: 426px) {
-    .nav-logo {
-        flex: 1 0 100px;
-        max-width: 100px;
-        width: 100px;
-    }
-    .nav-content {
-        display: none;
-    }
-
-    .nav-search {
-        height: 100%;
-        flex: 1 0 calc(100% - 175px);
-        max-width: calc(100% - 175px);
-        width: calc(100% - 175px);
-        display: flex;
-        align-items: center;
-    }
-
-    #search-movie {
-        font-size: 16px;
-    }
-
-    .hamburger-menu {
-        display: flex;
-    }
-
-    .menu-open {
-        width: 100%;
-        height: 100%;
-    }
-
-    .menu-open .hamburger-menu{
-        position: absolute;
-        height: 50px;
-        width: 150px;
-        right: 0;
-        top: 10px;
-    }
-
-    .menu-open .nav-search, .menu-open .nav-logo {
-        display: none;
-    }
-
-    .input-wrapper input {
-        width: 100%;
-    }
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);    
-    }
-    
-    35% {
-        transform: rotate(120deg);
-    }
-
-    70% {
-        transform: rotate(240deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 h1 {
-    font-size: 65px;
-}
-
-h1, h2, h3 {
-    color: var(--black);
-    letter-spacing: 3px;
+    font-size: 40px;
+    margin: 0;
 }
 
 h2 {
-    font-size: 55px;
+    font-size: 25px;
 }
 
 h3 {
-    font-size: 70px;
-    color: var(--white);
-    letter-spacing: 3px;
+    font-size: 23px;
+    color: var(--black);
+    margin: 0;
 }
 
 h4 {
-    margin: 0;
-    color: var(--white);
-    letter-spacing: 1px;
-    font-size: 18px;
+    margin: 5px 0;
+    font-size: 12px;
 }
 
-p {
-    font-family: var(--font-Roboto)
-}
-
-.content-wrapper {
+.pageheader {
     padding: 150px 0;
+    background: linear-gradient(180deg, rgba(255,230,0,1) 0%, rgba(255,245,152,1) 100%);
+    position: relative;
+
+    &:before, &:after{
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        content: '';
+    }
+
+    &:before {
+        top: 0;
+        left: 0;
+        border-width: 300px 600px 0 0;
+        border-color: var(--white) transparent transparent transparent;
+        opacity: 0.3;
+    }
+
+    &:after {
+        bottom: 0;
+        right: 0;
+        border-width: 0 0 300px 600px;
+        border-color: transparent transparent var(--white) transparent;
+        opacity: 0.2;
+    }
+
+
+
+    .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: var(--black);
+
+        p {
+            max-width: 600px;
+            line-height: 1.8;
+            margin: 0;
+        }
+    }
+}
+
+.cards-section {
+    display: flex;
+    justify-content: center;
+}
+
+.nerd-cards {
+    position: relative;
+    top: -60px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    width: calc(33.33% - 60px);
+    flex: 1 0 calc(33.33% - 60px);
+    max-width: calc(33.33% - 60px);
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    .card-header {
+
+    }
+
+    .card-body {
+        button {
+            background: transparent;
+            border: none;
+            font-weight: bold;
+            padding: 0;
+
+            &:after {
+                content: '\f101';
+                font-family: var(--font-fontAwesome);
+                font-size: 16px;
+                color: var(--black);
+            }
+        }
+    }
+
 }
 
 
@@ -306,6 +195,7 @@ p {
 /* ---------- MOVIE DETAILS PAGINA ---------- */
 
 .container {
+    height: 100%;
     padding: 0 150px;
 }
 
