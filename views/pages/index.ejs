@@ -6,14 +6,15 @@
     </head>
     <body>
         <section class="pageheader">
-            <img src="/coding.svg" alt="Coding logo">
+            <img src="/coding.svg" alt="Coding logo" class="pageheader-image">
+            <img src="/microphone.png" alt="Microphone icon" class="pageheader-image">
             <div class="content">
                 <div class="image-wrapper">
                     <img src="/logo.png" alt="Logo of Weekly Nerds">
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Minus, cum corrupti ipsa voluptas suscipit similique aperiam repellat blanditiis, 
-                    animi, nobis ipsum. Obcaecati non velit culpa veritatis quas deleniti totam nisi!</p>
+                <p>Welkom op mijn Weekly Nerds pagina! Hier vind je alle aantekeningen die ik heb gemaakt
+                    over de spreker, wat ik van de presentatie vond en wat ik er van geleerd heb. 
+                </p>
                 <div class="nav-search">
                     <form action="/search">
                         <div class="input-wrapper">
@@ -30,7 +31,7 @@
                 <div class="nerd-cards">
                     <div class="card-container">
                         <% dataResults.forEach(element => { %>
-                            <div class="card">
+                            <div class="card" id="<% element.id %>">
                                 <div class="card-header">
                                     <h3><%= element.titel %></h3>
                                     <h4><%= element.naam_spreker %></h4>

@@ -6,6 +6,7 @@
     --white: #ffffff;
     --black: #000000;
     --grey: #e7e7e7;
+    --lightgrey: #f3f3f3;
     --font-Roboto: "Roboto", sans-serif;
     --font-fontAwesome: "Font Awesome 6", sans-serif;
     --font-openSans: "Open Sans", sans-serif;
@@ -40,7 +41,7 @@ body {
 input {
     width: 80%;
     background-color: var(--white);
-    border: 2px solid var(--black);
+    border: 2px solid var(--lightgrey);
     padding: 10px 10px 10px 40px;
     position: relative;
     color: var(--black);
@@ -90,10 +91,20 @@ h4 {
 
     > img {
         width: 140px;
-        left: 130px;
-        bottom: 300px;
         position: absolute;
-        transform: rotate(-15deg);
+        opacity: 0.2;
+
+        &:first-of-type {
+            left: 130px;
+            bottom: 300px;
+            transform: rotate(-15deg);
+        }
+
+        &:last-of-type {
+            right: 130px;
+            bottom: 450px;
+            transform: rotate(-75deg);
+        }
     }
 
     &:before, &:after{
@@ -133,8 +144,8 @@ h4 {
         color: var(--black);
 
         p {
-            max-width: 600px;
-            line-height: 1.8;
+            max-width: 660px;
+            line-height: 1.5;
             margin: 0;
         }
     }
@@ -283,11 +294,6 @@ h4 {
     max-width: calc(50% - 30px);
     justify-content: flex-end;
     align-items: flex-start;
-}
-
-img {
-    width: 350px;
-    object-fit: contain;
 }
 
 .col-right {
