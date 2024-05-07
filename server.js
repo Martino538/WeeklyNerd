@@ -21,11 +21,17 @@ async function fetchDataset() {
   return { dataResults: data.results };
 }
 
+async function fetchMovieDetails(nerdId) {
+  const dataset = await fetchDataset();
+  const nerdIdManipulation = nerdId - 1;
+  return dataset.dataResults[nerdIdManipulation];
+}
+
 // Routes
 app.get("/", async (req, res) => {
   try {
     const { dataResults } = await fetchDataset();
-    res.render('pages/index', {dataResults});
+    res.render('pages/index', { dataResults });
   } catch (error) {
     console.error('Fetching movies failed:', error);
     res.status(500).send('Failed to fetch movies');
@@ -33,13 +39,12 @@ app.get("/", async (req, res) => {
 });
 
 // Detailpagina route
-app.get("/movie/:id", async (req, res) => {
+app.get("/nerd_detail/:id", async (req, res) => {
   try {
-    const movieId = req.params.id;
+    const nerdId = req.params.id;
+    const nerdData = await fetchMovieDetails(nerdId);
 
-    console.log(reviewData.results.length);
-
-    res.render('pages/movie_detail', { movie: movieData});
+    res.render('pages/nerd_detail', { nerdData });
   } catch (error) {
     console.error('Fetching movie details failed:', error);
     res.status(500).send('Test');
@@ -54,7 +59,7 @@ app.get("/search", async (req, res) => {
 
     const searchWithDataImages = searchData.results.filter(movie => movie.poster_path != null);
 
-    res.render('pages/search_results', { title: "Resultaten", searchdataResults: searchWithDataImages, searchTerm});
+    res.render('pages/search_results', { title: "Resultaten", searchdataResults: searchWithDataImages, searchTerm });
   } catch (error) {
     console.error('Fetching movie details failed:', error);
     res.status(500).send('test');
