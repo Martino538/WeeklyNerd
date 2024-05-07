@@ -317,7 +317,7 @@ h4 {
     margin: 100px 0;
 
     .nerd-content {
-        .nerd-note-wrapper {
+        .nerd-note-wrapper, .nerd-reflection-wrapper {
             margin-top: 50px;
         }
 
