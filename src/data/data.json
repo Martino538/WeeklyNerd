@@ -6,7 +6,7 @@
       "naam_spreker": "Kilian Valkhof",
       "datum": "07-02-2024",
       "onderwerp": "Nieuwe CSS & Browser Polypane",
-      "verslag": "Kilian maakt browsers (polypane)en heeft veel kennis van Js en CSS. Kies de programmeertaal die het minst kan, maar wel doet wat jij wilt. Blijf op de hoogte van de laatste ontwikkelingen voor toekomstige projecten. Inout elementen hebben van nature geen before & after. Met appearance: none maak je dit wel mogelijk in CSS.",
+      "verslag": "Kilian maakt browsers (polypane) en heeft veel kennis van Js en CSS.\nKies de programmeertaal die het minst kan, maar wel doet wat jij wilt.\nBlijf op de hoogte van de laatste ontwikkelingen voor toekomstige projecten.\nDingen waar mensen veel js voor gebruiken, maar je eingelijk ook door de browser kan laten doen.\nCustom Toggles:\nNiet alles via je framework willen oplossen. Sommige dingen worden al ondersteund door de browser. Denk een aan checkbox.\nInput elementen hebben van nature geen before & after. Met appearance: none maak je dit wel mogelijk in CSS.\nFocus-visible als je interactie hebt met een element, maar niet met een muis. Inplaats van outline none… niet weghalen maar outline-color: transparent\nDatalist:\nSuggesties geven terwijl je typt in een input. Gebruik html attribuut datalist\nColor picker:\nInput type color, dan krijg je een color picker\nIn-page transitions:\nSmooth scrolling, je kunt hier d.m.v. een media query de voorkeur laten aangeven zodat het niet standaard aanstaat.\nCarousels:\nScroll-snap-*\nAccordion:\n<details open>\n<summary>teew</summary>\n<p>rewtwe</p>\n</details>\nSummary::marker {}\n[open] summary::marker {}",
       "reflectie": ""
     },
     {
