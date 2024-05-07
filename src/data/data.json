@@ -24,17 +24,17 @@
       "naam_spreker": "Jeffrey Arts",
       "datum": "28-02-2024",
       "onderwerp": "Creative Developer & Toolbox",
-      "verslag": "Software Engineer",
-      "reflectie": ""
+      "verslag": "Jeffrey Arts is een echte Creative Developer. Tegelijkertijd ook een echte kunstenaar. Hij heeft d.m.v. ThreeJS een tool ontwikkeld waarmee hij stap voor stap figuren kan ontwikkelen. Deze figuren vormen de blauwdruk van een figuur dat hij later ook echt in beton gaat uitgieten. Ook had hij nog een aantal tips: GSAP is een leuke library om toffe animaties mee te maken - Als Als je iets gecompliceerds wilt maken is het handig om het stap voor stap aan te passen. Maak duplicaties van functionaliteiten zodat je altijd terug kunt naar een specifiek punt als je vastloopt. - Soms is falen een manier om tot een nieuwe oplossing te komen. Daarnaast blijven reflecteren. Soms zal het in een keer goed gaan.",
+      "reflectie": "Ik vond het erg tof om te zien wat er allemaal mogelijk is met het web. Ik had nooit voorzien dat je een tool kon maken die in een blauwdruk maakt voor een product, in 3D en vervolgens in het echt kunt maken. Echter vond ik het niet een hele leerzame weekly nerd. In zijn verhaal werden er ook niet veel code of technieken toegelicht. Ik vond het vooral indrukwekkend om te zien."
     },
     {
       "id": "4",
       "titel": "Weekly Nerd 4",
       "naam_spreker": "Nils Binder",
       "datum": "06-03-2024",
-      "onderwerp": "Hoofd Webdevelopment 9Elements",
-      "verslag": "Software Engineer",
-      "reflectie": ""
+      "onderwerp": "Hoofd Webdevelopment 7 WebDevelopment & Product design bij 9Elements",
+      "verslag": "Nils is hoofd Webdevelopment bij 7WebDevelopment & Product design bij 9Elements. Hij had vooral kennis te delen over container/wrapper elementen. Hij beschreef 3 manieren om een container te stylen: Width: min(100% - 3rem, 75rem) + Margin-inline: auto; - Max-width: 75rem; + Margin: 0 auto; + Padding: 0 1.5rem; Daarnaast gaf hij nog een techniek om kolommen te creeëren in magazine style: zet dit op de container: display: grid; + Grid-template-columns: 2fr 3fr auto 1fr; - Zet dit op de content: H1 { Grid-columns: 2 / 4;} + P {grid-columns: 2 / 4;}",
+      "reflectie": "Nils Binder had duidelijk veel vakkennis en ik vond het interessant om te zien hoe ze hun kolommen maken. Ik maak zelf veel gebruik van flexbox en zij juist meer grid. Hun techniek om kolommen te maken zou in de toekomst handig kunnen zijn, maar het geeft vooral aan dat grid soms toegankelijker kan zijn dan flexbox, afhankelijk van wat je wilt maken. Verder was het wel te zien dat hij een leidinggevende rol had. Hij ging namelijk niet super diep in op de stof naast de kolommen, maar vertelde ook een beetje over de bedrijven en wat hij daar doet. Al met al wel interessant, maar ik ben nog niet zo enthousiast als bij Kilian."
     },
     {
       "id": "5",
@@ -42,8 +42,8 @@
       "naam_spreker": "Jeremy Keith",
       "datum": "14-03-2024",
       "onderwerp": "Vertegenwoordiger Clearleft",
-      "verslag": "Software Engineer",
-      "reflectie": ""
+      "verslag": "Jerery werkt bij een agency genaamd Clearleft. Het bedrijf bied diensten als UX, design en development aan. Verder ging hij diep in op de verschillen tussen imperative en declarative programming. Bij imperative programming geef je de computer stap voor stap instructies wat het moet doen. Bij declarative specificeer je de output die je graag wilt en krijgt het resultaat. Hiernaast heeft hij nog verteld of HTML, CSS en JS imperative of declarative programmeertalen zijn. HTML is de structuur van documenten en is declarative. CSS geeft de suggestie om iets te doen en dus ook declarative. Bij JS kan de browser bij elke stap stoppen. Het gaat stap voor stap en is imperative. Nog een handige tip: gebruik padding-inline-start i.p.v. padding-left. Waarom? Als een pagina vertaald wordt zal de tekst er nog normaal op reageren.",
+      "reflectie": "Ik vond tot nu toe Jeremy Keith naast Kilian de meest leerzame. Jeremy had ook echt stof voorbereid om met ons te delen en ons iets nieuws aan te leren. Zelf vond ik deze kennis ook nuttig, omdat hij ook advies gaf bij het zoeken naar een werkplek. Zoek een bedrijf dat het beste bij je past kwa cultuur. Moet het strenge regels evenaren of mag het was losser zijn?"
     },
     {
       "id": "6",
@@ -51,8 +51,8 @@
       "naam_spreker": "Marieke & Pim",
       "datum": "03-04-2024",
       "onderwerp": "Het web toegankelijk maken voor iedereen!",
-      "verslag": "Software Engineer",
-      "reflectie": ""
+      "verslag": "Marieke is onderzoeker bij Digitaal toegankelijk. Ze houdt zich dagelijks bezig met het analyseren van websites van klanten om daar vervolgens een adviesrapport voor uit te schrijven. Pim is mede-oprichter van Digitaal toegankelijk",
+      "reflectie": "Zelf heb ik weinig baat bij het toegankelijk maken van webapplicaties/websites. Mijn interesse ligt veel meer bij de technieken om applicaties te bouwen dan het toegankelijk maken voor een (extra/nieuwe) doelgroep. Hiernaast vertelde ze vooral wat ze deden bij het bedrijf en toonde niet echt recente projecten of manier om iets te coderen of ontwerpen."
     },
     {
       "id": "7",
@@ -60,8 +60,8 @@
       "naam_spreker": "Rosa",
       "datum": "10-04-2024",
       "onderwerp": "Creative Coder bij Wetteloos",
-      "verslag": "Software Engineer",
-      "reflectie": ""
+      "verslag": "Rosa is een creative coder. Ze werkt 5 jaar bij Elastique/Wetteloos als digital creative. Als hobby doet ze veel aan circuit bending. Circuit bending: Is de creatieve manipulatie van circuits in elektronische apparaten om nieuwe muziek of visuele instrumenten te creëren. Als voorbeeld gebruikt ze haar zelfgemaakte apparaat, waarbij je geluiden van bestaande producten kunt vervormen tot nieuwe geluiden. Ook geeft ze geeft workshops waarbij ze probeert mensen enthousiast te maken door ze te laten spelen met techniek. Hier had ze ook een mooie quote voor bedacht. 'Probeer met bestaande dingen nieuwe dingen te maken.'. Verder vond ik haar boodschap erg mooi. Eigenlijk zegt ze maak je niet zo druk, het komt heus wel goed. Je kunt alle kanten op",
+      "reflectie": "Rosa kwam voor mij als een persoon over die in het begin heel onzeker was. Ze wist namelijk totaal niet wat ze wilde gaan doen na de opleiding en is in de stroming meegegaan. Ik heb niet heel veel nuttige dingen meegekregen naast haar mooie boodschap."
     }
   ]
 }
