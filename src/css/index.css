@@ -38,32 +38,6 @@ body {
     }
 }
 
-input {
-    width: 80%;
-    background-color: var(--white);
-    border: 2px solid var(--lightgrey);
-    padding: 10px 10px 10px 40px;
-    position: relative;
-    color: var(--black);
-    font-family: var(--font-Bebas);
-    letter-spacing: 1px;
-    font-size: 16px;
-
-    i {
-        color: var(--black);
-    }
-
-    &::placeholder {
-        color: var(--black);
-        font-family: var(--font-Bebas);
-        letter-spacing: 0;
-    }
-
-    &:focus-visible {
-        border-radius: 0;
-    }
-}
-
 h1 {
     font-size: 40px;
     margin: 0;
@@ -306,7 +280,7 @@ h4 {
     }
 }
 
-/* ---------- MOVIE DETAILS PAGINA ---------- */
+/* ---------- NERD DETAILS PAGINA ---------- */
 
 .container {
     height: 100%;
@@ -321,6 +295,9 @@ h4 {
             margin-top: 50px;
         }
 
+        summary::marker {
+            color: var(--yellow);
+        }        
     }
 }
 

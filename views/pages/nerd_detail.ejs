@@ -32,6 +32,29 @@
                         <h2>Reflectie over deze Weekly Nerd:</h2>
                         <p class="nerd-reflection"><%= nerdData.reflectie %></p>
                     </div>
+                    <% if(nerdData.naam_spreker === "Kilian Valkhof") { %>
+                        <div class="accordion-holder">
+                            <details open>
+                                <summary>Een korte zin</summary>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Necessitatibus nulla accusantium error temporibus iste 
+                                    dolores est voluptatum vero adipisci laudantium dicta ea commodi beatae, 
+                                    optio quia dolorem maiores magnam! Rem?</p>
+                            </details>                            
+                        </div>
+                        <div class="color">
+                            <input type="color" name="picker" id="colorpicker">
+                        </div>
+                        <div class="dialog-holder">
+                            <dialog open>
+                                <p>Greetings, one and all!</p>
+                                <form method="dialog">
+                                  <button>OK</button>
+                                </form>
+                              </dialog>
+                        </div>
+                    <%}%>
+
                 </div>
             </div>
         </div>
