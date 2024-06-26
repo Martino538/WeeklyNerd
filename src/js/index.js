@@ -1,27 +1,14 @@
-import '../css/index.css';
-import '../img/logo.png';
-import '../img/coding.svg';
-// import '../img/plaatje.jpg';
-
-
-function movieDetailUrl() {
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach(function(card) {
-        card.addEventListener('click', function() {
-            window.location.href = 'nerd_detail/' + this.id;
-        });
+document.addEventListener("mousemove", function(event) {
+    var eyes = document.querySelectorAll(".eye");
+    eyes.forEach(function(eye) {
+        var rect = eye.getBoundingClientRect();
+        var x = rect.left + (rect.width / 2);
+        var y = rect.top + (rect.height / 2);
+        var rad = Math.atan2(event.pageX - x, event.pageY - y);
+        var rot = (rad * (180 / Math.PI) * -1) + 180;
+        eye.style.webkitTransform = 'rotate(' + rot + 'deg)';
+        eye.style.mozTransform = 'rotate(' + rot + 'deg)';
+        eye.style.msTransform = 'rotate(' + rot + 'deg)';
+        eye.style.transform = 'rotate(' + rot + 'deg)';
     });
-}
-
-function sendToHome() {
-    const logo = document.querySelectorAll('.home-btn');
-    logo.forEach((element) => {
-        element.addEventListener('click', () => {
-            window.location.href = '/';
-        });
-    });
-}
-
-sendToHome();
-movieDetailUrl();
+});
