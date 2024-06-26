@@ -7,6 +7,13 @@
         <title>CMD Weekly Nerds | Martijn Kooijman</title>
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active-nav">Weekly Nerds</a></li>
+                <li><a href="vakken.html">De vakken</a></li>
+                <li><a href="meesterproef.html">Meesterproef</a></li>
+            </ul>
+        </nav>
         <section class="pageheader pageheader-detail">
             <div class="pageheader-image-wrapper">
                 <img src="/src/img/coding.svg" alt="Coding logo" class="pageheader-image">
@@ -38,78 +45,84 @@
         <section class="breadcrumb">
             <div class="container">
                 <a href="index.html">Home <i class="fa-solid fa-angle-right"></i></a>
-                <a href="weekly-nerd1.html" class="active-nerd">Nerd 1 - Kilian Valkhof</a>
+                <a href="weekly-nerd4.html" class="active-nerd">Nerd 4 - Nils Binder</a>
             </div>
         </section>
         <section class="nerd-detail-section">
             <div class="container">
                 <div class="nerd-details">
                     <div class="nerd-content">
-                        <div class="nerd-header-img">
-                            <img src="/src//img/kilian-valkhof.jpg" alt="Image of speaker Kilian Valkhof">
+                        <div class="col-left">
+                            <h1>Grid staat boven flexbox!</h1>
+                            <p>Datum: 06-03-2024</p>
+                            <p>Spreker: Nils Binder</p>
                         </div>
-                        <div class="nerd-header-info">
-                            <h1>JavaScript? Overbodig!</h1>
-                            <p>Datum: 07-02-2024</p>
-                            <p>Spreker: Kilian Valkhof</p>
+                        <div class="col-right">
+                            <img src="/src/img/nils2.jpeg" alt="Image of speaker Nils Binder">
                         </div>
                     </div>
                     <div class="nerd-summary">
                         <h2>Korte samenvatting</h2>
-                        <p>De eerste spreker is Kilian Valkhof. Hij maakt een browser voor ontwikkelaars genaamd Polypane. Deze browser focust zich op webontwikkeling
-                            en is voor ontwikkelaars een enorm goede toevoeging. Voor andere zaken naast webontwikkeling is het een minder goede browser
-                            vertelde Kilian, dus daar moet je het niet voor willen gebruiken.</p>
-                        <p>Ook vertelde hij over een regel genaamd <strong>Rule of power</strong>. Hiermee bedoeld hij dat het een goed uitgangspunt is om de programmeertaal
-                        te kiezen die het minst kan, maar wel precies doet wat jij wilt.</p>
-                        <p>Hiernaast verdiept hij zich ook veel in CSS. Zo komen er steeds meer technieken die je voorheen met Javascript moest oplossen, maar nu ook kunt maken d.m.v. CSS. 
-                            Er is veel minder code vereist om een functionaliteit te laten werken. Hiernaast kan het soms zijn dat je grote JavaScript bestanden moet inladen waardoor de website trager wordt.
-                            Het is dan veel beter om dit met CSS op te kunnen lossen.</p>
+                        <p>Nils Binder is hoofd webdevelopment bij 9 Elements. Aan zijn lezing te horen had hij veel kennis over CSS. Naast dat hij onze gastspreker was, is hij ook 
+                            onze gastdocent geweest. Hij heeft mij geholpen bij het aanleren van de :has selector tijdens het vak CSS To The Rescue. Door zijn uitleg heb ik destijds
+                            veel nieuwe inzichten gekregen!
+                        </p>
                     </div>
                     <div class="nerd-notes">
                         <h2>Aantekeningen</h2>
-                        <p>Hierdoor zijn mijn aantekingen weergegeven:</p>
+                        <p>Terug naar zijn lezing... Ik heb een aantal aantekeningen gemaakt over wat hij vertelde tijdens zijn lezing.</p>
                         <ul>
-                            <li>Soms is het leuk om een toggle knop te hebben, maar dit wordt van nature niet zomaar ondersteund. Al snel ben je geneigd om je framework te raadplegen om dit probleem
-                                te verhelpen. Dit is niet altijd nodig. Het is namelijk mogelijk om een checkbox om te bouwen tot een toggle knop. Voeg 'appearance: none' toe aan je checkbox.
-                                Hierdoor kan je de knop.</li>
-                            <li>Input elementen hebben van nature geen before & after. Met appearance: none maak je dit wel mogelijk in CSS. </li>
-                            <li>Input:focus-visible is ook nieuw. Hierbij gaat het erom dat je interactie kunnen hebben met een element, maar dan zonder je muis te gebruiken.
-                                Een mooi voorbeeld hiervan is je toetsenbord. Door een outline toe te voegen kan je zien waar je bent.</li>
-                            <li>Als je als input type 'color' gebruikt krijg je een color picker.
-                                <div class="color">
-                                    <input type="color" name="picker" id="colorpicker">
-                                </div>
+                            <li>Het container element bepaalt vaak de maximale breedte en geeft soms padding mee. Soms centreerd het ook de content</li>
+                            <li>Er zijn drie mogelijke manier om een container te stylen:
+                                <ol>
+                                    <li>
+                                        <code>
+                                            Wrapper {
+                                                Max-width: 75rem;
+                                                Margin: 0 auto;
+                                                Padding: 0 1.5rem;
+                                            }   
+                                        </code>
+                                    </li>
+                                    <li>
+                                        <code>
+                                            Wrapper {
+                                                Width: min(100% - 3rem, 75rem);
+                                                Margin-inline: auto;
+                                            }                                                
+                                        </code>
+                                    </li>
+                                    <li>
+                                        <code>
+                                            Wrapper {
+                                                Margin-inline: max(1.5rem, ((100% - 75em) / 2));
+                                            }                                   
+                                        </code>
+                                    </li>
+                                </ol>
                             </li>
-                            <li>Als je een de mogelijkheid wilt om te kunnen zoeken binnen een bepaalde lijst is het nu ook mogelijk om een 'datalist' element te gebruiken. Zie hieronder het voorbeeld:
-                                <label for="ice-cream-choice">Choose a flavor:</label>
-                                <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
-                                <datalist id="ice-cream-flavors">
-                                <option value="Chocolate"></option>
-                                <option value="Coconut"></option>
-                                <option value="Mint"></option>
-                                <option value="Strawberry"></option>
-                                <option value="Vanilla"></option>
-                                </datalist>
+                            <li><p>Hiernaast heeft hij ook nog een eigen kolommen structuur bedacht.</p>
+                                <code>
+                                    .div {
+                                        display: grid;
+                                        Grid-template-columns: 2fr 3fr auto 1fr;
+                                    }                         
+                                </code>
+                                <code>
+                                    H1 { Grid-columns: 2 / 4;}
+                                    P {grid-columns: 2 / 4;}
+                                </code>
                             </li>
-                            <li>Iets wat ik super interessant vond is het Details/Summary element. Voorheen dacht ik altijd dat het best veel tijd koste om dit voor elkaar te krijgen,
-                                maar het kan nu dus veel gemakkelijker
-                                <div class="dialog-holder">
-                                    <details open>
-                                        <summary>Een korte zin</summary>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                            Necessitatibus nulla accusantium error temporibus iste 
-                                            dolores est voluptatum vero adipisci laudantium dicta ea commodi beatae, 
-                                            optio quia dolorem maiores magnam! Rem?</p>
-                                    </details>   
-                                </div>
-                            </li>
-                            <li>Als laatste vond ik het ook zeer indrukwekkend om te zien dat je nu gemakkelijk een pop-up kunt creëren. Dit gebeurd d.m.v. het element 'Dialog'.</li>
                         </ul>
                     </div>
                     <div class="nerd-reflection-wrapper">
-                        <h2>Wat neem ik mee van deze spreker?</h2>
-                        <p>Ik vond de lezing van Kilian super interessant. Hij vertelde alles op een manier waardoor ik alles begreep wat hij vertelde. Wat ik meeneem naar de toekomst
-                            zijn de input types zoals colorpicker of datalist. Hiernaast neem ik de kennis van de details/summary en de datalist mee. Al met al geef ik deze lezer een 8.
+                        <h2>Reflectie</h2>
+                        <p>Nils Binder vond ik een boeiende spreker, omdat hij veel kennis in CSS heeft. Zijn manier van positionering vond ik ook 
+                            erg pakkend, maar momenteel weet ik nog niet hoe ik grid moet gebruiken. Dit zou ik mijzelf eerst moeten aanleren. Ook vond ik het ondenkbaar dat 
+                            er zoveel verschillende soorten units bestaan. Echter denk ik dat ik voor nu zijn gedeelde kennis niet zo snel gebruiken, omdat het vrij
+                            complex is en vooral gericht op positionering in tijdschriften.</p>
+                        <p>Hij heeft mij wel aan het denken gezet. Momenteel gebruik ik eigenlijk alleen flexbox, maar ik heb het idee dat je met grid meer controle hebt. 
+                            Ik wil daarom mijzelf grid ook in de toekomst gaan aanleren.
                         </p>
                     </div>
                 </div>

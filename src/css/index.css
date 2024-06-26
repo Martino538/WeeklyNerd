@@ -65,6 +65,7 @@ nav {
         gap: 20px;
         height: 100%;
         width: 100%;
+        padding: 0;
 
         & li {
             display: flex;
@@ -306,6 +307,8 @@ nav {
     padding: 0 300px 0 300px;
 }
 
+
+
 .cards-section {
     display: flex;
     justify-content: center;
@@ -326,9 +329,6 @@ nav {
                     justify-content: space-between;
                     text-decoration: none;
                     color: var(--black);
-                    flex: 1 0 calc(33.33% - 20px);
-                    max-width: calc(33.33% - 20px);
-                    width: calc(33.33% - 20px);
                 
                     & .card {
                         background-color: var(--white);
@@ -363,6 +363,7 @@ nav {
                         & .card-footer {
                             padding: 10px;
                             display: flex;
+                            flex-wrap: wrap;
                             gap: 10px;
                             border-top: 1px solid var(--opacity-black);
 
@@ -409,23 +410,22 @@ nav {
 }
 
 @media screen and (max-width: 425px) {
-    .card-container {
-        flex-direction: column;
-
-        & .card-link {
-            width: 100%;
-            flex: 1 0 100%;
-            max-width: 100%;
-    
-            & .card {
-                & .card-header {
-                    h3 {
-                        max-width: 270px;
-                        font-size: 20px;
+    .cards-section {
+        & .container {
+            & .nerd-cards {
+                & .card-container {
+                    a {
+                        flex: 1 0 100%;
+                        width: 100%;
+                        max-width: 100%;
                     }
                 }
             }
         }
+    }
+
+    .container {
+        padding: 0 25px;
     }
 
     .category-title {
@@ -437,11 +437,127 @@ nav {
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
+@media screen and (min-width: 426px) and (max-width: 768px){
+    .container {
+        padding: 0 75px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pageheader-image-wrapper {
+        display: none;
+    }
+
+    .pageheader {
+        & .content {
+            & .content-wrapper {
+                & .upper-text, & .lower-text {
+                    & h1, & p {
+                        font-size: 60px;
+                    }
+
+                    & h1 {
+                        &:after {
+                            font-size: 60px;
+                            left: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .card-container {
+        flex-direction: column;
+
+        .cards-section {
+            & .container {
+                & .nerd-cards {
+                    & .card-container {
+                        a {
+                            flex: 1 0 calc(50% - 15px);
+                            max-width: calc(50% - 15px);
+                            width: calc(50% - 15px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .nerd-detail-section {
+        .row {
+            flex-direction: column;
+
+            & .col-left, & .col-right {
+                flex: 1 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .nerd-content {
+        & .col-left, & .col-right {
+            flex: 1 0 100%;
+            max-width: 100%;
+            width: 100%;
+        }
+        
+        & .col-right {
+            & img {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .nerd-detail-section {
+        .row {
+            & .col-left, & .col-right {
+                flex: 1 0 calc(50% - 15px);
+                max-width: calc(50% - 15px);
+                width: calc(50% - 15px);
+            }
+        }
+    }
+
+    .nerd-content {
+        & .col-left {
+            flex: 1 0 50%;
+            width: calc(50% - 25px);
+            max-width: calc(50% - 25px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        & .col-right {
+            display: flex;
+            flex: 1 0 50%;
+            width: calc(50% - 25px);
+            max-width: calc(50% - 25px);
+            justify-content: center;
+
+            & img {
+                width: 400px;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px){
+    .container {
+        padding: 0 100px;
+    }
+
     a {
-        width: calc(33.33% - 15px);
-        flex: 1 0 calc(33.33% - 15px);
-        max-width: calc(33.33% - 15px);
+        width: calc(50% - 15px);
+        flex: 1 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
 
         & .card {
             & .card-header {
@@ -453,12 +569,22 @@ nav {
     }
 }
 
-@media screen and (min-width: 1025px) {
-    a {
-        & .card {
-            & .card-header {
-                h3 {
-                    max-width: 320px;
+@media screen and (min-width: 1440px) {
+    .container {
+        padding: 0 300px;
+    }
+
+    .cards-section {
+        a {
+            width: calc(33.33% - 20px);
+            flex: 1 0 calc(33.33% - 20px);
+            max-width: calc(33.33% - 20px);
+    
+            & .card {
+                & .card-header {
+                    h3 {
+                        max-width: 320px;
+                    }
                 }
             }
         }
@@ -503,29 +629,6 @@ nav {
                 gap: 50px;
                 flex-wrap: wrap;
 
-                & .col-left {
-                    flex: 1 0 50%;
-                    width: calc(50% - 25px);
-                    max-width: calc(50% - 25px);
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-                & .col-right {
-                    display: flex;
-                    flex: 1 0 50%;
-                    width: calc(50% - 25px);
-                    max-width: calc(50% - 25px);
-                    justify-content: center;
-
-                    & img {
-                        width: 400px;
-                        border-radius: 20px;
-                    }
-                }
-
-
                 & .nerd-header-info {
                     flex: 1 0 100%;
                 }
@@ -563,9 +666,26 @@ nav {
         }
 
         & .nerd-reflection {
-            h2 {
-                &:first-of-type {
+            & .nerd-details-intro {
+                h2 {
                     font-size: 42px;
+                }
+    
+            }
+
+            & h3 {
+                font-size: 16px;
+                margin: 0;
+            }
+
+            & .goals-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                & .row {
+                    display: flex;
+                    gap: 50px;
                 }
             }
         }
@@ -665,5 +785,13 @@ footer {
         height: 100%;
         display: flex;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    footer {
+        & .container {
+            justify-content: center;
+        }
     }
 }

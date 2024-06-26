@@ -7,6 +7,14 @@
         <title>CMD Weekly Nerds | Martijn Kooijman</title>
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active-nav">Weekly Nerds</a></li>
+                <!-- <li><a href="over-mij.html">Over mij</a></li> -->
+                <li><a href="vakken.html">De vakken</a></li>
+                <li><a href="meesterproef.html">Meesterproef</a></li>
+            </ul>
+        </nav>
         <section class="pageheader pageheader-detail">
             <div class="pageheader-image-wrapper">
                 <img src="/src/img/coding.svg" alt="Coding logo" class="pageheader-image">
@@ -38,79 +46,85 @@
         <section class="breadcrumb">
             <div class="container">
                 <a href="index.html">Home <i class="fa-solid fa-angle-right"></i></a>
-                <a href="weekly-nerd1.html" class="active-nerd">Nerd 1 - Kilian Valkhof</a>
+                <a href="weekly-nerd-reflectie3.html" class="active-nerd">Weekly Nerd - Gesprek 3</a>
             </div>
         </section>
         <section class="nerd-detail-section">
             <div class="container">
-                <div class="nerd-details">
-                    <div class="nerd-content">
-                        <div class="nerd-header-img">
-                            <img src="/src//img/kilian-valkhof.jpg" alt="Image of speaker Kilian Valkhof">
-                        </div>
-                        <div class="nerd-header-info">
-                            <h1>JavaScript? Overbodig!</h1>
-                            <p>Datum: 07-02-2024</p>
-                            <p>Spreker: Kilian Valkhof</p>
-                        </div>
-                    </div>
-                    <div class="nerd-summary">
-                        <h2>Korte samenvatting</h2>
-                        <p>De eerste spreker is Kilian Valkhof. Hij maakt een browser voor ontwikkelaars genaamd Polypane. Deze browser focust zich op webontwikkeling
-                            en is voor ontwikkelaars een enorm goede toevoeging. Voor andere zaken naast webontwikkeling is het een minder goede browser
-                            vertelde Kilian, dus daar moet je het niet voor willen gebruiken.</p>
-                        <p>Ook vertelde hij over een regel genaamd <strong>Rule of power</strong>. Hiermee bedoeld hij dat het een goed uitgangspunt is om de programmeertaal
-                        te kiezen die het minst kan, maar wel precies doet wat jij wilt.</p>
-                        <p>Hiernaast verdiept hij zich ook veel in CSS. Zo komen er steeds meer technieken die je voorheen met Javascript moest oplossen, maar nu ook kunt maken d.m.v. CSS. 
-                            Er is veel minder code vereist om een functionaliteit te laten werken. Hiernaast kan het soms zijn dat je grote JavaScript bestanden moet inladen waardoor de website trager wordt.
-                            Het is dan veel beter om dit met CSS op te kunnen lossen.</p>
-                    </div>
-                    <div class="nerd-notes">
-                        <h2>Aantekeningen</h2>
-                        <p>Hierdoor zijn mijn aantekingen weergegeven:</p>
-                        <ul>
-                            <li>Soms is het leuk om een toggle knop te hebben, maar dit wordt van nature niet zomaar ondersteund. Al snel ben je geneigd om je framework te raadplegen om dit probleem
-                                te verhelpen. Dit is niet altijd nodig. Het is namelijk mogelijk om een checkbox om te bouwen tot een toggle knop. Voeg 'appearance: none' toe aan je checkbox.
-                                Hierdoor kan je de knop.</li>
-                            <li>Input elementen hebben van nature geen before & after. Met appearance: none maak je dit wel mogelijk in CSS. </li>
-                            <li>Input:focus-visible is ook nieuw. Hierbij gaat het erom dat je interactie kunnen hebben met een element, maar dan zonder je muis te gebruiken.
-                                Een mooi voorbeeld hiervan is je toetsenbord. Door een outline toe te voegen kan je zien waar je bent.</li>
-                            <li>Als je als input type 'color' gebruikt krijg je een color picker.
-                                <div class="color">
-                                    <input type="color" name="picker" id="colorpicker">
-                                </div>
-                            </li>
-                            <li>Als je een de mogelijkheid wilt om te kunnen zoeken binnen een bepaalde lijst is het nu ook mogelijk om een 'datalist' element te gebruiken. Zie hieronder het voorbeeld:
-                                <label for="ice-cream-choice">Choose a flavor:</label>
-                                <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
-                                <datalist id="ice-cream-flavors">
-                                <option value="Chocolate"></option>
-                                <option value="Coconut"></option>
-                                <option value="Mint"></option>
-                                <option value="Strawberry"></option>
-                                <option value="Vanilla"></option>
-                                </datalist>
-                            </li>
-                            <li>Iets wat ik super interessant vond is het Details/Summary element. Voorheen dacht ik altijd dat het best veel tijd koste om dit voor elkaar te krijgen,
-                                maar het kan nu dus veel gemakkelijker
-                                <div class="dialog-holder">
-                                    <details open>
-                                        <summary>Een korte zin</summary>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                            Necessitatibus nulla accusantium error temporibus iste 
-                                            dolores est voluptatum vero adipisci laudantium dicta ea commodi beatae, 
-                                            optio quia dolorem maiores magnam! Rem?</p>
-                                    </details>   
-                                </div>
-                            </li>
-                            <li>Als laatste vond ik het ook zeer indrukwekkend om te zien dat je nu gemakkelijk een pop-up kunt creëren. Dit gebeurd d.m.v. het element 'Dialog'.</li>
-                        </ul>
-                    </div>
-                    <div class="nerd-reflection-wrapper">
-                        <h2>Wat neem ik mee van deze spreker?</h2>
-                        <p>Ik vond de lezing van Kilian super interessant. Hij vertelde alles op een manier waardoor ik alles begreep wat hij vertelde. Wat ik meeneem naar de toekomst
-                            zijn de input types zoals colorpicker of datalist. Hiernaast neem ik de kennis van de details/summary en de datalist mee. Al met al geef ik deze lezer een 8.
+                <div class="nerd-details nerd-reflection">
+                    <div class="nerd-details-intro">
+                        <h2>Weekly Nerd gesprek 3</h2>
+                        <p>Dit was de laatste periode van de Minor. Tijdens de meesterproef heb ik mij verdiept in het behalen van mijn leerdoelen. Hieronder heb ik uitgebreid
+                            beschreven hoe dit is verlopen.
                         </p>
+                    </div>
+                    <h2>Hoe is het gegaan met mijn leerdoelen?</h2>
+                    <div class="goals-wrapper">
+                        <div class="row">
+                            <div class="col-left">
+                                <h3>Taken delegeren en werkdruk beheersen</h3>
+                                <p>Tijdens het project zijn er meerdere situaties geweest waarin een teamlid tegen problemen aan liep. Als voorbeeld gebruik ik mijn teamlid 
+                                    Justin. Hij had de opdracht om met GSAP een horizontale scroll te integreren en had moeite om dit werkend te krijgen met onze code 
+                                    conventies. Hij stelde veel vragen wat erg goed was, maar soms was ik even te druk met mijn eigen taken. Op zulke momenten heb ik 
+                                    tegen hem gezegd dat hij zijn vragen even aan een ander teamlid moest stellen, omdat even geen tijd had om te helpen. Ik heb dus 
+                                    geleerd ‘Nee’ te zeggen op momenten dat het niet uitkwam.</p>
+                            </div>
+                            <div class="col-right">
+                                <p>Ook heb ik met simpele taken niet zomaar het antwoord gegeven, maar heb ik een ondersteunende rol aangenomen door hem een 
+                                    richting te geven waar de oplossing voor zijn probleem kan liggen. Hij ging eerst zelf op zoek naar het antwoord zonder dat ik 
+                                    meteen het antwoord te geven of de taak zelf uit te voeren. Hierdoor merkte ik dat ik veel meer tijd had om mijn eigen taken af 
+                                    te ronden en was de werkdruk een stuk lager.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-left">
+                                <h3>Iteratief werken en stapsgewijze planning implementeren</h3>
+                                <p>Tijdens het tweede Weekly Nerd gesprek heb ik het al een beetje omschreven, maar wij hebben een wekelijkse planning gemaakt waarin de 
+                                    focuspunten van die specifieke week aan bod kwamen. Hierdoor werden we geforceerd om stapsgewijs te werk te gaan en was er geen 
+                                    mogelijkheid om meteen in een eindproduct te denken. Elke week begon met een stand-up meeting waarin we de voortgang van het 
+                                    project bespraken. Hierna hebben we in Trello al onze taken gezet en deze onderling in het team verdeeld. Door het gebruik van 
+                                    Trello hadden we constant een goed overzicht van wat er moest gebeuren.</p>
+                            </div>
+                            <div class="col-right">
+                                <p>Hiernaast hebben we elke week minimaal één keer met de opdrachtgever afgesproken voor een feedback moment. Dit hielp ons erg om 
+                                    verschillende iteraties te maken en weerhield ons om op zaken vooruit te lopen, zoals het denken in een eindproduct.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-left">
+                                <h3>Werken met Advanced Custom Fields (ACF) en uitlezen naar de browser</h3>
+                                <p>Als ik ergens trots op ben dan is het wel het werken met Wordpress en ACF. Ik wist vooraf vrijwel niks over Wordpress, behalve dat 
+                                    je websites kon maken en kon werken met plugins zoals Elementor. Toen ik erachter kwam dat je een eigen thema kunt bouwen en d.m.v. 
+                                    PHP kunt combineren met ACF om een beheerbare website te coderen ging een nieuwe wereld voor mij open. Ik heb geleerd hoe je met
+                                     ACF-velden kunt creëren die in de backend te beheren zijn voor de klant. Nadat de klant deze heeft ingevuld en opslaat kan je d.m.v. 
+                                     PHP de waardes ophalen en weergeven in bijvoorbeeld je eigen HTML. Ik vind het dan ook superleuk dat ik de basis van een nieuwe 
+                                     taal heb mogen leren, namelijk PHP. </p>
+                            </div>
+                            <div class="col-right">
+                                <p>Ook heb ik nog een heleboel kleine details binnen ACF geleerd. Zo heb ik een integratie met Font-awesome (een icoon bibliotheek) 
+                                    geïntegreerd waardoor de klant zijn/haar eigen icoontjes kan instellen bij componenten en heb ik het mogelijk gemaakt om gebruik 
+                                    te maken van het ‘herhaler’ type. D.m.v. de herhaler kan je een element (oneindig) dupliceren. Hierdoor wordt je website nóg 
+                                    dynamischer en hoef je geen dubbele code te schrijven.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Wat ga ik meenemen van de sprekers?</h2>
+                    <div class="goals-wrapper">
+                        <div class="row">
+                            <div class="col-left">
+                                <h3>Robert Spier</h3>
+                                <p>In de laatste periode vond ik vooral de lezing van Robert Spier interessant. Hij werkt bij een groot bedrijf, wat een leuke afwisseling 
+                                    was van de gebruikelijke freelance sprekers. Zijn tips over geldzaken waren nieuw voor mij en hij benadrukte hoe belangrijk het is om 
+                                    hierover te praten en onderzoek te doen. Dit is handig voor toekomstige sollicitaties. Hij zei ook dat plezier in je werk belangrijk 
+                                    is en dat je niet bang moet zijn om nee te zeggen.</p>
+                            </div>
+                            <div class="col-right">
+                                <h3>Bramus van Damme</h3>
+                                <p>Ook interessant was Bramus van Damme. Hij vertelde over view-transitions, een animatie die nog niet door alle browsers wordt ondersteund.
+                                     Zijn uitleg was soms lastig te volgen door de vele voorbeelden, maar ik zie wel potentie voor deze techniek in de toekomst. Ik houd deze lezing
+                                    in mijn achterhoofd en het lijkt me leuk om dit in de toekomst te gaan gebruiken.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
